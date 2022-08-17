@@ -10,3 +10,7 @@ void even_odd(void)
     }
     printf("It's a odd number");
 }
+int main()
+{
+    even_odd();
+}
