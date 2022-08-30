@@ -14,9 +14,25 @@ void sort(int *a,int n)
         }
     }
 }
+void array_copy(int *a,int *b,int n)
+{
+for(int i=0;i<n;i++)
+    {
+    b[i]=a[i];
+    }
+}
 bool is_sorted(int *a,int n)
 {
-int b[n]=
+int b[n];
+array_copy(a,b,n);
+sort(b,n);
+for(int i=0;i<n;i++)
+{
+    if(a[i]!=b[i]){
+        return false;
+    }
+}
+return true;
 }
 int main()
 {
